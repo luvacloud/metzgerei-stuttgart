@@ -733,6 +733,79 @@ p:last-child {
   margin-top: 12px;
 }
 
+/* --- 404 Fehlerseite --- */
+
+.error-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.error-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.error-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.error-box {
+  position: relative;
+  z-index: 2;
+  background: rgba(15, 10, 8, 0.75);
+  padding: 64px 80px;
+  max-width: 640px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.error-code {
+  font-family: 'Inter', sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ef745a;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.error-box h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: white;
+  margin: 0;
+}
+
+.error-box p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: white;
+  margin: 0;
+}
+
+.error-box .btn-row {
+  margin-top: 16px;
+  justify-content: center;
+}
+
 /* --- Impressum Seite --- */
 
 .impressum-page {
@@ -1229,16 +1302,48 @@ footer {
   }
 
   footer {
-    padding: 28px 20px;
+    padding: 36px 20px 28px;
   }
 
   .footer-inner {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: 14px;
   }
 
+  .footer-left,
+  .footer-middle,
   .footer-right {
     align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-top-row,
+  .footer-bottom-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-managed {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 11px;
+    opacity: 0.45;
+  }
+
+  .error-box {
+    padding: 40px 24px;
+  }
+
+  .error-code {
+    font-size: 64px;
+  }
+
+  .error-box h1 {
+    font-size: 24px;
   }
 }
