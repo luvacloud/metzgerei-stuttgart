@@ -735,44 +735,65 @@ p:last-child {
 
 /* --- 404 Fehlerseite --- */
 
-.error-page {
+.error-hero {
+  position: relative;
   min-height: 100vh;
-  background-color: #ef745a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.error-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.error-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.error-box {
+  position: relative;
+  z-index: 2;
+  background: rgba(15, 10, 8, 0.75);
+  padding: 64px 80px;
+  max-width: 640px;
+  width: 90%;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 120px 24px 80px;
   gap: 16px;
 }
 
 .error-code {
   font-family: 'Inter', sans-serif;
-  font-size: 140px;
+  font-size: 96px;
   font-weight: 600;
   line-height: 1;
-  letter-spacing: -0.04em;
-  color: white;
+  color: #ef745a;
+  letter-spacing: -0.03em;
   margin: 0;
 }
 
-.error-page h1 {
-  font-family: 'Inter', sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: white;
-  margin: 0;
-}
-
-.error-text {
+.error-box p {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   line-height: 1.7;
   color: white;
-  max-width: 520px;
-  margin: 0 0 16px 0;
+  margin: 0;
+}
+
+.error-box .btn-outline {
+  margin-top: 16px;
 }
 
 /* --- Impressum Seite --- */
@@ -1304,11 +1325,11 @@ footer {
     opacity: 0.45;
   }
 
-  .error-code {
-    font-size: 96px;
+  .error-box {
+    padding: 40px 24px;
   }
 
-  .error-page h1 {
-    font-size: 28px;
+  .error-code {
+    font-size: 64px;
   }
 }
