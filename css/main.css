@@ -861,62 +861,74 @@ p:last-child {
 
 /* --- Footer --- */
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 40px 80px;
+footer {
   background-color: #ef745a;
+  padding: 28px 80px;
+  width: 100%;
 }
 
-.footer__col {
-  flex: 1;
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.footer__col--left {
-  text-align: left;
+.footer-left,
+.footer-middle,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.footer__col--center {
-  text-align: center;
+.footer-right {
+  align-items: flex-end;
 }
 
-.footer__col--right {
-  text-align: right;
-}
-
-.footer__brand {
-  font-size: 18px;
+.footer-logo {
+  color: white;
   font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
+  font-size: 16px;
+  font-family: Inter, sans-serif;
   letter-spacing: 0.05em;
+  line-height: 1;
 }
 
-.footer__link {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ffffff;
+.footer-link {
+  color: white;
+  font-size: 15px;
+  font-family: Inter, sans-serif;
   text-decoration: none;
+  line-height: 1;
 }
 
-.footer__copyright {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-
-.footer__credit {
-  font-size: 13px;
-  font-weight: 400;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer__credit:hover {
+.footer-link:hover {
   text-decoration: underline;
+}
+
+.footer-copy {
+  color: white;
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  line-height: 1;
+}
+
+.footer-managed {
+  font-size: 11px;
+  color: white;
+  opacity: 0.45;
+  text-decoration: none;
+  margin-top: 6px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  display: block;
+}
+
+.footer-managed:hover {
+  opacity: 0.7;
 }
 
 /* --- Mobile --- */
@@ -1216,7 +1228,17 @@ p:last-child {
     font-size: 36px;
   }
 
-  .footer {
-    padding: 40px 20px;
+  footer {
+    padding: 28px 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-right {
+    align-items: center;
   }
 }
