@@ -434,6 +434,10 @@ p:last-child {
   margin-bottom: 0;
 }
 
+.oz-mobile {
+  display: none;
+}
+
 /* --- Über uns --- */
 
 .about {
@@ -1103,6 +1107,59 @@ footer {
 
   .oeffnungszeiten-logo {
     display: none;
+  }
+
+  #oeffnungszeiten .oeffnungszeiten-inner {
+    display: none;
+  }
+
+  #oeffnungszeiten {
+    padding: 64px 24px;
+  }
+
+  .oz-mobile {
+    display: block;
+    width: 100%;
+    color: #ef745a;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .oz-title {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: #ef745a;
+    margin: 0 0 20px 0;
+  }
+
+  .oz-title-second {
+    margin-top: 48px;
+  }
+
+  .oz-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 0;
+    border-top: 1px solid #f4c3b6;
+    font-size: 16px;
+  }
+
+  .oz-row.oz-last {
+    border-bottom: 1px solid #f4c3b6;
+  }
+
+  .oz-label {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .oz-time {
+    font-weight: 400;
+    text-align: right;
+    line-height: 1.6;
   }
 
   .oeffnungszeiten-inner {
