@@ -1075,6 +1075,24 @@ footer {
     transform: translateY(-7px) rotate(-45deg);
   }
 
+  nav.nav-open {
+    background-color: #ef745a;
+  }
+
+  nav.nav-open .logo,
+  nav.nav-open .nav-link {
+    color: #ffffff;
+  }
+
+  nav.nav-open .nav-kontakt {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+
+  nav.nav-open .nav__toggle-bar {
+    background-color: #ffffff;
+  }
+
   .hero-title {
     font-size: 36px;
   }
